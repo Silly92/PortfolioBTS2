@@ -1078,7 +1078,7 @@
             </div>
         </section>
 
-        <!-- PROJETS - Version mise à jour avec le nouveau projet -->
+        <!-- PROJETS -->
         <section id="projets">
             <h2 class="section-title"><i class="fas fa-project-diagram"></i> Projets Réalisés</h2>
             
@@ -1150,7 +1150,94 @@
                 </div>
             </div>
 
-            <!-- Projet 2 : Site d'hébergement touristique -->
+            <!-- Projet 2 : Site de Gestion d'un Zoo -->
+            <div class="projet-box">
+                <div class="projet-header">
+                    <h3>🦁 Site de Gestion d'un Zoo – Zoo de la Palmyre</h3>
+                    <p>Projet BTS SIO – PPE1 | Présentation : 7 Avril 2026</p>
+                </div>
+                <div class="projet-content">
+                    <div class="projet-tags">
+                        <span class="projet-tag">PHP</span>
+                        <span class="projet-tag">MySQL</span>
+                        <span class="projet-tag">HTML/CSS</span>
+                        <span class="projet-tag">JavaScript</span>
+                        <span class="projet-tag">Bootstrap</span>
+                        <span class="projet-tag">Gestion de session</span>
+                    </div>
+                    
+                    <p style="margin-bottom: 20px; color: var(--gray); line-height: 1.8;">
+                        Développement d'un site web complet pour la gestion du Zoo de la Palmyre. 
+                        L'application permet de gérer les animaux, les catégories (espèces) et le personnel du zoo, 
+                        avec des droits d'accès différenciés selon les rôles (employé / directeur).
+                    </p>
+
+                    <h4 style="color: var(--primary); margin: 20px 0 15px;">🎯 Contexte et objectifs</h4>
+                    <p style="margin-bottom: 15px; color: var(--gray);">
+                        Le responsable informatique du Zoo de la Palmyre m'a confié la mission de réaliser un site web 
+                        permettant de piloter l'établissement. L'objectif est de centraliser la gestion des animaux, 
+                        des espèces et du personnel dans une interface intuitive et sécurisée.
+                    </p>
+                    <ul style="margin-bottom: 25px; padding-left: 20px; color: var(--gray);">
+                        <li>Permettre aux employés de gérer les animaux (ajout, modification, suppression, recherche)</li>
+                        <li>Permettre aux directeurs de gérer le personnel (ajout, modification, suppression)</li>
+                        <li>Mettre en place un système d'authentification sécurisé avec gestion des rôles</li>
+                        <li>Créer une interface responsive et ergonomique</li>
+                    </ul>
+
+                    <h4 style="color: var(--primary); margin: 20px 0 15px;">👥 Acteurs et droits d'accès</h4>
+                    <div class="projet-features">
+                        <div class="projet-feature"><i class="fas fa-user-tie"></i> <strong>Directeur</strong> : Gestion des employés + gestion des animaux</div>
+                        <div class="projet-feature"><i class="fas fa-user"></i> <strong>Employé</strong> : Gestion des animaux uniquement</div>
+                        <div class="projet-feature"><i class="fas fa-lock"></i> <strong>Visiteur</strong> : Consultation uniquement (liste des animaux)</div>
+                    </div>
+
+                    <h4 style="color: var(--primary); margin: 20px 0 15px;">🗄️ Modélisation de la base de données</h4>
+                    <p style="margin-bottom: 10px; color: var(--gray);"><strong>Structure relationnelle :</strong></p>
+                    <ul style="margin-bottom: 25px; padding-left: 20px; color: var(--gray);">
+                        <li><strong>Especes</strong> : id_espece, nom, type_nourriture, duree_vie, aquatique</li>
+                        <li><strong>Animaux</strong> : id_animal, espece_id (FK), date_naissance, sexe, pseudo, commentaire</li>
+                        <li><strong>Personnels</strong> : id_personnel, nom, prenom, date_naissance, sexe, login, mdp, fonction, salaire</li>
+                        <li><strong>Enclos</strong> : id_enclos (PK), nom, capacite_max, taille, presence_eau, responsable_id (FK)</li>
+                        <li><strong>Loc_animaux</strong> : id_location, animal_id (FK), enclos_id (FK), date_arrivee, date_sortie</li>
+                    </ul>
+
+                    <h4 style="color: var(--primary); margin: 20px 0 15px;">⚙️ Fonctionnalités implémentées</h4>
+                    <div class="projet-features">
+                        <div class="projet-feature"><i class="fas fa-lock"></i> Authentification sécurisée (formulaires)</div>
+                        <div class="projet-feature"><i class="fas fa-paw"></i> CRUD complet des animaux</div>
+                        <div class="projet-feature"><i class="fas fa-tag"></i> CRUD des espèces (catégories)</div>
+                        <div class="projet-feature"><i class="fas fa-users"></i> CRUD des employés (réservé directeurs)</div>
+                        <div class="projet-feature"><i class="fas fa-search"></i> Recherche d'animaux par critères</div>
+                        <div class="projet-feature"><i class="fas fa-info-circle"></i> Pages de détail (animaux, espèces, employés)</div>
+                        <div class="projet-feature"><i class="fas fa-check-circle"></i> Validation JavaScript des formulaires</div>
+                        <div class="projet-feature"><i class="fas fa-chart-simple"></i> Dashboard de navigation</div>
+                    </div>
+
+                    <h4 style="color: var(--primary); margin: 20px 0 15px;">🌟 Bonus envisagés</h4>
+                    <div class="projet-features">
+                        <div class="projet-feature"><i class="fas fa-ticket-alt"></i> Gestion des billeteries et tarifs</div>
+                        <div class="projet-feature"><i class="fas fa-calendar-check"></i> Système de réservation de visites</div>
+                    </div>
+
+                    <h4 style="color: var(--primary); margin: 20px 0 15px;">📊 Compétences développées</h4>
+                    <div class="projet-features">
+                        <div class="projet-feature"><i class="fas fa-database"></i> Conception BDD relationnelle (5 tables)</div>
+                        <div class="projet-feature"><i class="fas fa-code"></i> PHP procédural avec requêtes préparées</div>
+                        <div class="projet-feature"><i class="fas fa-paintbrush"></i> Front-end responsive (HTML/CSS/JS)</div>
+                        <div class="projet-feature"><i class="fas fa-user-lock"></i> Gestion des sessions et contrôle d'accès</div>
+                        <div class="projet-feature"><i class="fas fa-magnifying-glass"></i> Recherche multicritères</div>
+                        <div class="projet-feature"><i class="fas fa-clipboard-list"></i> Respect des consignes et critères de réussite</div>
+                    </div>
+
+                    <div class="veille-source" style="margin-top: 25px;">
+                        <i class="fas fa-file-alt" style="color: var(--secondary); margin-right: 8px;"></i>
+                        <strong>Livrables :</strong> Code source complet (PHP, HTML, CSS, JS), Script SQL de création de la base de données, Documentation, Présentation orale devant le comité de direction
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projet 3 : Site d'hébergement touristique -->
             <div class="projet-box">
                 <div class="projet-header">
                     <h3>🏠 Site d'hébergement touristique</h3>
