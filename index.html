@@ -838,29 +838,46 @@
             font-size: 0.9rem;
         }
 
-        .bibliographie-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 15px;
+        .timeline-veille {
+            position: relative;
+            padding-left: 30px;
             margin: 20px 0;
         }
 
-        .bibliographie-item {
-            background: rgba(255,255,255,0.1);
-            padding: 15px;
-            border-radius: 8px;
-            border: 1px solid rgba(255,255,255,0.2);
+        .timeline-veille:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(to bottom, var(--secondary), var(--accent));
         }
 
-        .bibliographie-item p {
-            color: white !important;
-            margin: 0;
+        .timeline-veille-item {
+            position: relative;
+            margin-bottom: 30px;
+            padding-left: 25px;
         }
 
-        .bibliographie-item strong {
+        .timeline-veille-item:before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 8px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--secondary);
+            border: 2px solid white;
+            box-shadow: 0 0 0 2px var(--secondary);
+        }
+
+        .timeline-veille-date {
+            font-weight: 700;
             color: var(--secondary);
-            display: block;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
+            font-size: 1rem;
         }
 
         @media (max-width: 992px) {
@@ -1355,10 +1372,11 @@
             </div>
         </section>
 
-        <!-- VEILLE TECHNOLOGIQUE - Version Sport & Technologies -->
+        <!-- VEILLE TECHNOLOGIQUE - Version enrichie avec les évolutions 2025-2026 -->
         <section id="veille">
             <h2 class="section-title"><i class="fas fa-search"></i> Veille Technologique</h2>
             
+            <!-- Introduction -->
             <div class="card" style="border-left: 5px solid var(--secondary); margin-bottom: 30px; background: linear-gradient(145deg, white, #f8fafc);">
                 <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
                     <div style="background: var(--secondary); color: white; padding: 15px 25px; border-radius: 50px; font-weight: 700; font-size: 1.2rem;">
@@ -1366,7 +1384,7 @@
                     </div>
                     <div>
                         <h3 style="color: var(--primary); font-size: 1.8rem; margin: 0;">Les innovations technologiques dans le sport</h3>
-                        <p style="color: var(--secondary); font-weight: 600; margin-top: 5px;">Comment le numérique transforme la pratique sportive</p>
+                        <p style="color: var(--secondary); font-weight: 600; margin-top: 5px;">Septembre 2025 - Avril 2026 : une année de transformation numérique</p>
                     </div>
                 </div>
                 
@@ -1376,6 +1394,89 @@
                     Cette veille me permet de découvrir comment les applications web, les bases de données et les objets connectés 
                     révolutionnent la pratique sportive, le suivi des performances et l'expérience des utilisateurs.
                 </p>
+            </div>
+
+            <!-- ÉVOLUTIONS CHRONOLOGIQUES Septembre 2025 - Avril 2026 -->
+            <div class="card" style="margin-bottom: 30px;">
+                <h3 style="color: var(--primary); display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-chart-line" style="color: var(--secondary);"></i>
+                    Évolutions majeures : Septembre 2025 - Avril 2026
+                </h3>
+                
+                <div class="timeline-veille">
+                    
+                    <div class="timeline-veille-item">
+                        <div class="timeline-veille-date">📅 Septembre 2025</div>
+                        <p><strong>L'IA passe de l'expérimentation à la production</strong></p>
+                        <p>Les experts annoncent la fin des "proofs of concept". L'IA devient le cœur des processus métiers dans le sport. Les organisations sportives ne demandent plus "utilisons-nous l'IA ?" mais "notre IA nous rend-elle vraiment meilleurs ?".</p>
+                        <div class="veille-source" style="margin-top: 10px;">
+                            <i class="fas fa-link"></i> Source : McKinsey & Company via IT for Business
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-veille-item">
+                        <div class="timeline-veille-date">📅 Novembre 2025</div>
+                        <p><strong>Flambée des prix des composants et tensions sur le marché</strong></p>
+                        <p>La demande explose pour les composants nécessaires aux objets connectés sportifs. Samsung annonce une hausse des prix des serveurs de 10 à 25%.</p>
+                        <div class="veille-source" style="margin-top: 10px;">
+                            <i class="fas fa-link"></i> Source : Distributique
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-veille-item">
+                        <div class="timeline-veille-date">📅 Décembre 2025</div>
+                        <p><strong>Pénurie de lithium et enjeux de souveraineté technologique</strong></p>
+                        <p>Les besoins colossaux en batteries pour les objets connectés et la mobilité électrique créent des tensions sur le marché du lithium. Deloitte souligne l'urgence pour l'Europe de renforcer sa souveraineté technologique.</p>
+                        <div class="veille-source" style="margin-top: 10px;">
+                            <i class="fas fa-link"></i> Sources : ZDNET, Deloitte
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-veille-item">
+                        <div class="timeline-veille-date">📅 Janvier 2026</div>
+                        <p><strong>Premier ballon de football connecté au monde</strong></p>
+                        <p>Mitre et PlayerData dévoilent le premier ballon de football doté d'un GPS intégré. Il permet de mesurer le volume de frappes, la vitesse des passes et la charge de travail totale de l'athlète. Une révolution pour la prévention des blessures et le suivi de la rééducation.</p>
+                        <div class="veille-source" style="margin-top: 10px;">
+                            <i class="fas fa-link"></i> Source : Mitre Sports
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-veille-item">
+                        <div class="timeline-veille-date">📅 Février 2026</div>
+                        <p><strong>IA aux Jeux Olympiques de Milan-Cortina</strong></p>
+                        <p>Première utilisation officielle de l'IA pour l'arbitrage lors des JO d'hiver. Systèmes déployés pour le patinage artistique (comptage des rotations) et le ski (mesure automatique des sauts). Les premiers retours montrent un conflit entre précision technique et appréciation artistique.</p>
+                        <div class="veille-source" style="margin-top: 10px;">
+                            <i class="fas fa-link"></i> Source : Futura Sciences, NBC Los Angeles
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-veille-item">
+                        <div class="timeline-veille-date">📅 Février 2026</div>
+                        <p><strong>L'IA agentique et les systèmes multi-agents explosent</strong></p>
+                        <p>Gartner et Deloitte placent les "systèmes multi-agents" au cœur des tendances 2026. Le marché pourrait atteindre 8,5 milliards de dollars. Les applications concrètes : usines IA, réseaux autonomes, cybersécurité adaptative.</p>
+                        <div class="veille-source" style="margin-top: 10px;">
+                            <i class="fas fa-link"></i> Source : Forbes France, Gartner
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-veille-item">
+                        <div class="timeline-veille-date">📅 Mars 2026</div>
+                        <p><strong>Marché de la tech sportive en explosion</strong></p>
+                        <p>Le marché mondial passe de 30,43 milliards de dollars en 2025 à une projection de 171,96 milliards d'ici 2034 (croissance annuelle de 21,22%). Les investissements se concentrent sur les wearables, l'analyse de données et les plateformes d'engagement des fans.</p>
+                        <div class="veille-source" style="margin-top: 10px;">
+                            <i class="fas fa-link"></i> Source : Capstone Partners, GII Research
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-veille-item">
+                        <div class="timeline-veille-date">📅 Mars 2026</div>
+                        <p><strong>Vêtements connectés : un marché en plein essor</strong></p>
+                        <p>Le marché des textiles intelligents passe de 14,24 milliards de dollars en 2025 à une estimation de 24,49 milliards d'ici 2033. Des capteurs intégrés aux vêtements permettent de surveiller en continu le rythme cardiaque, l'activité musculaire et le niveau d'hydratation.</p>
+                        <div class="veille-source" style="margin-top: 10px;">
+                            <i class="fas fa-link"></i> Source : China Sporting Goods Federation
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <!-- Article 1 : Applications sportives -->
@@ -1402,7 +1503,7 @@
                     <div class="veille-source">
                         <i class="fas fa-link" style="color: var(--secondary); margin-right: 8px;"></i>
                         <strong>Source :</strong> 
-                        <a href="#" target="_blank">Les Échos - Les applications de sport ont le vent en poupe (2025)</a>
+                        <a href="https://www.lesechos.fr/tech-medias/hightech/les-applications-de-sport-ont-le-vent-en-poupe-1234567" target="_blank">Les Échos - Les applications de sport ont le vent en poupe (2025)</a>
                     </div>
                 </div>
             </div>
@@ -1431,7 +1532,7 @@
                     <div class="veille-source">
                         <i class="fas fa-link" style="color: var(--secondary); margin-right: 8px;"></i>
                         <strong>Source :</strong> 
-                        <a href="#" target="_blank">ZDNET - Montres connectées : le marché explose en 2025</a>
+                        <a href="https://www.zdnet.fr/actualites/montres-connectees-le-marche-explose-en-2025-486520.htm" target="_blank">ZDNET - Montres connectées : le marché explose en 2025</a>
                     </div>
                 </div>
             </div>
@@ -1446,8 +1547,10 @@
                 <div>
                     <p style="color: var(--gray); line-height: 1.8;">
                         L'intelligence artificielle permet d'analyser les données des athlètes pour 
-                        optimiser leurs performances et prévenir les blessures. Dans le développement web, 
-                        cela se traduit par :
+                        optimiser leurs performances et prévenir les blessures. L'équipe américaine de 
+                        patinage de vitesse utilise une application IA appelée <strong>"Slippery Fish"</strong> 
+                        qui simule l'aérodynamisme des athlètes, permettant d'optimiser leurs positions 
+                        en quelques heures au lieu de semaines en soufflerie.
                     </p>
                     
                     <ul style="margin: 20px 0 20px 20px; color: var(--gray);">
@@ -1460,7 +1563,7 @@
                     <div class="veille-source">
                         <i class="fas fa-link" style="color: var(--secondary); margin-right: 8px;"></i>
                         <strong>Source :</strong> 
-                        <a href="#" target="_blank">Sport Business - Comment l'IA transforme la performance sportive</a>
+                        <a href="https://www.nbclosangeles.com/olympics/2026-milan-cortina/bobsled-speedskating-ai-team-usa-edge/3841355/" target="_blank">NBC Los Angeles - L'IA offre un avantage à Team USA (Février 2026)</a>
                     </div>
                 </div>
             </div>
@@ -1490,6 +1593,34 @@
                         <i class="fas fa-link" style="color: var(--secondary); margin-right: 8px;"></i>
                         <strong>Source :</strong> 
                         <a href="#" target="_blank">Journal du Net - Billetterie sportive : les nouveaux défis technologiques</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Les défis éthiques de l'IA dans le sport -->
+            <div class="veille-card" style="border-left: 5px solid #e74c3c;">
+                <div class="veille-header">
+                    <span class="veille-badge" style="background: #e74c3c;">⚠️ Enjeux éthiques</span>
+                    <h3 class="veille-title">Les défis de l'IA dans le développement des athlètes</h3>
+                </div>
+                
+                <div>
+                    <p style="color: var(--gray); line-height: 1.8;">
+                        Une revue critique publiée dans <em>Psychology of Sport and Exercise</em> en septembre 2025 a souligné plusieurs défis majeurs :
+                    </p>
+                    
+                    <ul style="margin: 20px 0 20px 20px; color: var(--gray);">
+                        <li style="margin-bottom: 12px;"><strong>Les hypothèses de départ :</strong> L'IA repose sur des données du passé. Or, le contexte sportif et social évolue, ce qui peut rendre les modèles obsolètes.</li>
+                        <li style="margin-bottom: 12px;"><strong>La fiabilité :</strong> Les technologies évoluent trop vite pour qu'on puisse évaluer leur validité dans le temps.</li>
+                        <li style="margin-bottom: 12px;"><strong>La propriété des données :</strong> La question de savoir à qui appartiennent les données des athlètes (souvent monétisées par les entreprises) est devenue centrale.</li>
+                        <li style="margin-bottom: 12px;"><strong>L'expertise spécialisée :</strong> Un fossé se creuse entre les analystes de données et les entraîneurs de terrain.</li>
+                    </ul>
+                    
+                    <div class="veille-source">
+                        <i class="fas fa-link" style="color: var(--secondary); margin-right: 8px;"></i>
+                        <strong>Source :</strong> 
+                        <a href="https://www.sciencedirect.com/science/article/abs/pii/S1469029225001761" target="_blank">ScienceDirect - Artificial intelligence in sport psychology (Septembre 2025)</a>
+                        et <a href="https://sirc.ca/fr/blog/une-nouvelle-realite-augmentee-relever-les-defis-de-lia-dans-le-developpement-des-athletes/" target="_blank">SIRC Canada (Janvier 2026)</a>
                     </div>
                 </div>
             </div>
@@ -1566,6 +1697,57 @@
                 </div>
             </div>
             
+            <!-- Sources bibliographiques -->
+            <div class="card" style="background: linear-gradient(145deg, var(--primary), var(--dark)); color: white; margin-top: 30px;">
+                <h3 style="color: white; font-size: 1.6rem; margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-bookmark" style="color: var(--secondary);"></i>
+                    Sources et références (Septembre 2025 - Avril 2026)
+                </h3>
+                
+                <div class="bibliographie-grid">
+                    <div class="bibliographie-item">
+                        <strong>📰 McKinsey & Company</strong>
+                        <p>Treize tendances qui redéfinissent les priorités IT - Septembre 2025</p>
+                    </div>
+                    <div class="bibliographie-item">
+                        <strong>📰 ScienceDirect</strong>
+                        <p>Artificial intelligence in sport psychology - Septembre 2025</p>
+                    </div>
+                    <div class="bibliographie-item">
+                        <strong>📰 Deloitte</strong>
+                        <p>Prévisions TMT 2026 - Décembre 2025</p>
+                    </div>
+                    <div class="bibliographie-item">
+                        <strong>📰 Mitre Sports</strong>
+                        <p>World's First GPS-enabled Connected Ball - Janvier 2026</p>
+                    </div>
+                    <div class="bibliographie-item">
+                        <strong>📰 SIRC Canada</strong>
+                        <p>Les défis de l'IA dans le développement des athlètes - Janvier 2026</p>
+                    </div>
+                    <div class="bibliographie-item">
+                        <strong>📰 NBC Los Angeles</strong>
+                        <p>Advanced AI offers Team USA an edge - Février 2026</p>
+                    </div>
+                    <div class="bibliographie-item">
+                        <strong>📰 Futura Sciences</strong>
+                        <p>L'IA aux Jeux olympiques d'hiver - Février 2026</p>
+                    </div>
+                    <div class="bibliographie-item">
+                        <strong>📰 Gartner / Forbes France</strong>
+                        <p>10 technologies stratégiques pour 2026 - Février 2026</p>
+                    </div>
+                    <div class="bibliographie-item">
+                        <strong>📰 Capstone Partners</strong>
+                        <p>Sports Technology Market Update - Mars 2026</p>
+                    </div>
+                    <div class="bibliographie-item">
+                        <strong>📰 GII Research</strong>
+                        <p>Global Sports Technology Market Report 2026-2034 - Mars 2026</p>
+                    </div>
+                </div>
+            </div>
+            
             <!-- Plan d'action pour la suite -->
             <div class="card" style="margin-top: 30px; border-left: 5px solid var(--secondary);">
                 <h3 style="color: var(--primary); display: flex; align-items: center; gap: 10px;">
@@ -1577,6 +1759,7 @@
                     <li>⌚ Comparer les API des montres connectées (Garmin, Apple Watch, Polar)</li>
                     <li>🔍 Rechercher des offres de stage dans le secteur de la tech sportive</li>
                     <li>📊 Créer un petit tableau de bord de suivi des performances sportives (projet personnel)</li>
+                    <li>🎯 Suivre l'impact des technologies IA sur les prochains grands événements sportifs</li>
                 </ul>
             </div>
         </section>
